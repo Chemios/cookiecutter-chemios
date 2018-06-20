@@ -81,7 +81,7 @@ def test_bake_with_defaults(cookies):
 
         found_toplevel_files = [f.basename for f in result.project.listdir()]
         assert 'setup.py' in found_toplevel_files
-        assert 'python_boilerplate' in found_toplevel_files
+        assert 'chemios_instrument' in found_toplevel_files
         assert 'tox.ini' in found_toplevel_files
         assert 'tests' in found_toplevel_files
 
@@ -111,7 +111,7 @@ def test_bake_with_apostrophe_and_run_tests(cookies):
 #     # given:
 #     with bake_in_temp_dir(cookies) as result:
 #         project_path = str(result.project)
-# 
+#
 #         # when:
 #         travis_setup_cmd = ('python travis_pypi_setup.py'
 #                             ' --repo audreyr/cookiecutter-pypackage --password invalidpass')
@@ -179,7 +179,7 @@ def test_bake_not_open_source(cookies):
 def test_using_pytest(cookies):
     with bake_in_temp_dir(cookies, extra_context={'use_pytest': 'y'}) as result:
         assert result.project.isdir()
-        test_file_path = result.project.join('tests/test_python_boilerplate.py')
+        test_file_path = result.project.join('tests/test_chemios_instrument.py')
         lines = test_file_path.readlines()
         assert "import pytest" in ''.join(lines)
         # Test the new pytest target
@@ -191,7 +191,7 @@ def test_using_pytest(cookies):
 def test_not_using_pytest(cookies):
     with bake_in_temp_dir(cookies) as result:
         assert result.project.isdir()
-        test_file_path = result.project.join('tests/test_python_boilerplate.py')
+        test_file_path = result.project.join('tests/test_chemios_instrument.py')
         lines = test_file_path.readlines()
         assert "import unittest" in ''.join(lines)
         assert "import pytest" not in ''.join(lines)
@@ -201,12 +201,12 @@ def test_not_using_pytest(cookies):
 #     result = cookies.bake(extra_context={'project_name': 'something-with-a-dash'})
 #     assert result.project is not None
 #     project_path = str(result.project)
-# 
+#
 #     # when:
 #     travis_setup_cmd = ('python travis_pypi_setup.py'
 #                         ' --repo audreyr/cookiecutter-pypackage --password invalidpass')
 #     run_inside_dir(travis_setup_cmd, project_path)
-# 
+#
 #     # then:
 #     result_travis_config = yaml.load(open(os.path.join(project_path, ".travis.yml")))
 #     assert "secure" in result_travis_config["deploy"]["password"],\
