@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# cookiecutter-pypackage documentation build configuration file, created by
+# cookiecutter-chemios documentation build configuration file, created by
 # sphinx-quickstart on Sun Dec 13 09:13:01 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -16,6 +16,8 @@
 import sys
 import os
 import shlex
+import datetime as dt
+from recommonmark.transform import AutoStructify
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -41,6 +43,7 @@ extensions = [
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
+
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 # source_suffix = ['.rst', '.md']
@@ -53,9 +56,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'cookiecutter-pypackage'
-copyright = '2015, Audrey Roy Greenfeld'
-author = 'Audrey Roy Greenfeld'
+project = 'cookiecutter-chemios'
+copyright = '{} Chemios'.format(dt.date.today().year)
+author = 'Chemios'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -115,15 +118,14 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'alabaster'
+html_theme = 'flask'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+html_theme_path = ['_themes']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -160,7 +162,10 @@ html_static_path = ['_static']
 #html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+html_sidebars = {
+    'index': ['globaltoc.html', 'links.html'],
+}
+
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
@@ -207,7 +212,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'cookiecutter-pypackagedoc'
+htmlhelp_basename = 'cookiecutter-chemiosdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -229,8 +234,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'cookiecutter-pypackage.tex', 'cookiecutter-pypackage Documentation',
-   'Audrey Roy Greenfeld', 'manual'),
+  (master_doc, 'cookiecutter-chemios.tex', 'cookiecutter-chemios Documentation',
+   'Kobi Felton', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -259,7 +264,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'cookiecutter-pypackage', 'cookiecutter-pypackage Documentation',
+    (master_doc, 'cookiecutter-chemios', 'cookiecutter-chemios Documentation',
      [author], 1)
 ]
 
@@ -273,8 +278,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'cookiecutter-pypackage', 'cookiecutter-pypackage Documentation',
-   author, 'cookiecutter-pypackage', 'One line description of project.',
+  (master_doc, 'cookiecutter-chemios', 'cookiecutter-chemios Documentation',
+   author, 'cookiecutter-chemios', 'One line description of project.',
    'Miscellaneous'),
 ]
 

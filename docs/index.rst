@@ -1,10 +1,14 @@
-.. cookiecutter-pypackage documentation master file, created by
-   sphinx-quickstart on Sun Dec 13 09:13:01 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to cookiecutter-pypackage's documentation!
+Cookiecutter Chemios
 ==================================================
+
+Cookiecutter-Chemios is a template for chemios instrument drivers.
+
+
+Chemios_ is a platform automating and monitoring laboratory instruments, and
+Cookiecutter Chemios standardizes the format for new instrument drivers.
+Standardization makes the Chemios platform easily extinsible and more maintainable.
+
+.. _Chemios:  https://github.com/Chemios/chemios
 
 Getting Started
 ---------------
@@ -12,31 +16,5 @@ Getting Started
 .. toctree::
    :maxdepth: 2
 
-   readme
+   overview
    tutorial
-   pypi_release_checklist
-
-Basics
-------
-
-.. toctree::
-   :maxdepth: 2
-
-   prompts
-
-Advanced Features
------------------
-
-.. toctree::
-   :maxdepth: 2
-
-   travis_pypi_setup
-   console_script_setup
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

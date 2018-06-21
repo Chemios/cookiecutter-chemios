@@ -1,23 +1,3 @@
-.. image:: https://travis-ci.com/Chemios/cookiecutter-chemios.svg?branch=master
-    :target: https://travis-ci.com/Chemios/cookiecutter-chemios
-    :alt: Build status on Travis CI
-
-.. image:: https://readthedocs.org/projects/cookiecutter-chemios/badge
-    :target: https://cookiecutter-chemios.readthedocs.io/en/latest/?badge=latest
-    :alt: Documentation Status
-
-Cookiecutter Chemios
-====================
-
-This is a template for chemios_ instrument drivers.
-Each driver is for a type of instrument (e.g., pumps, temperature controllers, etc.).
-
-This repository is a cookiecutter_ template.
-So, you fill out a quick command line form to generate a pre-scaffolded repo for your driver.
-
-.. _chemios:  https://github.com/Chemios/chemios
-.. _cookiecutter: https://github.com/audreyr/cookiecutter
-
 Structure of a Chemios Driver
 -----------------------------
 
@@ -36,6 +16,7 @@ Take the temperature controlller driver, for example:
     .github  #Template for pull requests
 
 .. _`abstract base class`: https://www.python-course.eu/python3_abstract_classes.php
+
 
 Installation
 ------------
@@ -74,4 +55,3 @@ Now your driver is ready to use and synced to github.
 
 .. _`python 3.0 or above`: https://www.python.org/downloads/
 .. _git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-
