@@ -4,6 +4,7 @@
 
 from abc import ABC
 
-class TemperatureControllers(ABC):
+class {{ cookiecutter.instrument_type.title().replace(' ', '').replace('-','') }}(ABC):
     def __init__(self):
         pass
+
