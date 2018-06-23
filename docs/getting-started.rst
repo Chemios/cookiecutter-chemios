@@ -53,7 +53,9 @@ See `Omega9300Series.py`_ for an example.
 New Instrument
 --------------
 
-To create a new instrument, we will use the :any:`../new_instrument.py` script.
+To create a new instrument, we will use the `new_instrument.py`_ script.
 
 This script creates a new instrument file based on the base file.
 It also imports the newly created class inside that file to the package level (via __init__.py)
+
+.. _`new_instrument.py: https://github.com/Chemios/cookiecutter-chemios/blob/master/%7B%7B%20cookiecutter.project_slug%20%7D%7D/new_instrument.py

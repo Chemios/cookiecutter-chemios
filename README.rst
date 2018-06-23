@@ -18,6 +18,10 @@ So, you fill out a quick command line form to generate a pre-scaffolded repo for
 .. _chemios:  https://github.com/Chemios/chemios
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
 
+Below are some basic instructions to get you started.  You can find more detailed documenation here_.
+
+.. _here: https://cookiecutter-chemios.readthedocs.io/en/latest/
+
 Structure of a Chemios Driver
 -----------------------------
 
